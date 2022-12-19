@@ -9,7 +9,6 @@ for i in range (0, len(lista)):
     print(lista[i], end="-")
     print("")
 
-
 massimo = lista[0]
 minimo = lista[0]
 

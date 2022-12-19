@@ -7,6 +7,7 @@ def leggi_file():
 
     for riga in righe[1:]:
         campi_riga = riga[:-1].split(",")
+        print(campi_riga)#lista contenente id e nome
         diz["id"].append(int(campi_riga[0]))
         diz["nome"].append(campi_riga[1][1:]) #toglie lo spazio prima della parola 
     return diz
@@ -14,12 +15,13 @@ def leggi_file():
 def nomeId(id,diz):
     lista_id = diz["id"]
     lista_nomi = diz["nome"]
-    for i, n in zip(lista_id, lista_nomi): # i è l'id , n è il nome
+    for i, n in zip(lista_id, lista_nomi): # i è l'id , n è il nome, zip scorre due o più liste
         if i == id:
             return n
 
 def main():
     diz = leggi_file()
+    print(diz)
     id = 2
     nome = nomeId(id, diz)
     print(nome)
